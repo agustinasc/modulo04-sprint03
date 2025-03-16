@@ -1,0 +1,18 @@
+[
+    { "id": 1, "image": "/fotoPan.webp", "title": "Pan artesanal", "price": "5000.00"},
+    { "id": 2,"image": "/panFrances.jpeg", "title": "Pan Francés", "price": "1000.00" },
+    { "id": 3,"image": "/PanDulce.jpeg", "title": "Pan dulce", "price": "8000.00" },
+    { "id": 4,"image": "/Focaccia.jpeg", "title": "Focaccia", "price": "2500.00" },
+    { "id": 5,"image": "/budin.jpeg", "title": "Budines", "price": "3000.00" },
+    { "id": 6,"image": "/maicena.jpeg", "title": "Alfajor Maicena", "price": "500.00" },
+    { "id": 7,"image": "/milhojas.jpeg", "title": "Milhojas", "price": "1000.00" },
+    { "id": 8,"image": "/bizcochuelo.jpeg", "title": "Bizcochuelo", "price": "1000.00" },
+    { "id": 9,"image": "/panHamburguesa.jpeg", "title": "Pan de Hamburguesa", "price": "2000.00" },
+    { "id": 10,"image":"/criollos.jpeg", "title": "Criollitos de Hojaldre", "price": "1000.00" },
+    { "id": 11,"image": "/brownie.jpeg", "title": "Brownie de Chocolate", "price": "500.00" },
+    { "id": 12,"image": "/masaMadre.jpeg", "title": "Panes de Masa Madre", "price": "7000.00" },
+    { "id": 13,"image": "/galletaAvena.jpeg", "title": "Galleta de Avena", "price": "500.00" },
+    { "id": 14,"image": "/grisines.jpeg", "title": "Grisines", "price": "700.00" },
+    { "id": 15,"image": "/bollito.jpeg", "title": "Bollito de Dulce de Leche", "price": "500.00" },
+    { "id": 16,"image": "/pastafrola.jpeg", "title": "Pasta Frola Individual", "price": "500.00" }
+  ]
