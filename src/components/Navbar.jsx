@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import logo from '../assets/logo2.png';
 import { CartContext } from "../context/CartContext";
 import { ThemeContext } from "../context/ThemeContext";
+import * as motion from "motion/react-client"
 
 
 
@@ -108,11 +109,21 @@ export const Navbar = () => {
 
               {/* MODO CLARO/OSCURO */}
           <div>
+            {theme === "oscuro" ? "Modo Oscuro" : "Modo Claro"}
               <button
-                className={`${theme === "oscuro" ? "text-white hover:text-rose-300 transition-transform duration-700 transform hover:scale-120" : "text-black hover:text-orange-800 transition-transform duration-700 transform hover:scale-120"}`}
+                className={`flex items-center w-20 h-10 p-1 rounded-full cursor-pointer transition-all ${theme === "oscuro" ? "bg-rose-400 justify-end" : "bg-gray-800 justify-start"}`}
                 onClick={toggleTheme}
-              >
-                {theme === "claro" ? "Modo Oscuro" : "Modo Claro"}
+              >  
+                <motion.div
+                  className="w-8 h-8 bg-white rounded-full shadow-md"
+                  layout
+                  transition={{
+                    type: "spring",
+                    visualDuration: 0.2,
+                    bounce: 0.2,
+                }}
+                />
+
               </button>
           </div>
 
