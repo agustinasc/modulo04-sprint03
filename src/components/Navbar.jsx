@@ -109,7 +109,10 @@ export const Navbar = () => {
 
               {/* MODO CLARO/OSCURO */}
           <div>
-            {theme === "oscuro" ? "Modo Oscuro" : "Modo Claro"}
+            <p className={`${theme === "oscuro" ? "text-white" : "text-black"}`}
+            >
+              {theme === "oscuro" ? "Modo Oscuro" : "Modo Claro"}
+            </p>
               <button
                 className={`flex items-center w-20 h-10 p-1 rounded-full cursor-pointer transition-all ${theme === "oscuro" ? "bg-rose-400 justify-end" : "bg-gray-800 justify-start"}`}
                 onClick={toggleTheme}
