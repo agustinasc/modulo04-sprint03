@@ -19,7 +19,7 @@ export const CartProvider = ({children}) => {
  
 
     useEffect(() => {
-      fetch("/src/products.json")
+      fetch("/products.json")
         .then((res) => res.json())
         .then((data)=> setProducts(data))
         .catch((error) => console.error("Error al cargar productos", error))
