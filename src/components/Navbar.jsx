@@ -62,13 +62,15 @@ export const Navbar = () => {
         {/* VIEW DESKTOP */}
         <div className='flex justify-between items-center sm:px-12 sm:py-6 px-6 py-3'>
           {/* LOGO */}
-          <div className='flex items-center gap-2'>
+          <div className='flex flex-col items-center gap-2'>
               <img src={logo} 
               alt="Logo panaderia" 
-              className='w-[200px] rounded-full'
+              className='w-[120px] sm:w-[200px] rounded-full'
               />
               <p 
-                className={`${theme === "oscuro" ? 'text-white font-bold text-3xl' : "text-[#5B0601] font-bold text-3xl"}`}
+                className={`${
+                  theme === "oscuro" ? "text-white" : "text-[#5B0601]"
+                } font-bold text-xl sm:text-3xl`}
               >
                 PANIFICADORA
               </p>
