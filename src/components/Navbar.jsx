@@ -74,7 +74,7 @@ export const Navbar = () => {
               </p>
           </div>
 
-          {/* MENU HAMBURGUESA */}
+          {/*VISIBILIDAD MENU HAMBURGUESA */}
           <button 
           className='md:hidden text-white p-2 cursor-pointer text-2xl'
           onClick={toggleMenu}
@@ -151,20 +151,30 @@ export const Navbar = () => {
         </div>
 
         {/* VIEW MOBILE */}
-        <div className={`md:hidden absolute w-full bg-gray-800 bg-opacity-30 transition-all duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+        <div className={`md:hidden absolute w-full bg-gray-600 bg-opacity-30 transition-all duration-300 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
               
               {/* NAVIGATION LINKS MOBILE*/}
           
             <ul className='flex flex-col px-4 py-2'>
               {navbarLinks.map((link)=> (
-                <li key={link.id} className='py-2 text-center'>
-                  <a 
-                  href={"/"} 
-                  className='text-white hover:text-yellow-500 block'
-                  onClick={() => setisOpen(false)}
-                  >{link.title}</a>
+                <li className='py-2 text-center' key={link.id}>               
+                  {link.id === 4 ? (
+                    <button 
+                      className={`${theme === "oscuro" ? 'text-lg text-white p-0.5 border-2 border-solid rounded-xl' : 'text-lg text-black p-0.5 inline-block border-2 border-solid rounded-xl'}`}
+                      onClick={openCart}
+                    >
+                      {link.title}<i className="m-1 bi bi-cart"></i>
+                    </button>
+                  ) : (
+                    <a 
+                    href="/" 
+                    className={`${theme === "oscuro" ? 'text-lg text-white' : 'text-lg text-black'}`}
+                    >{link.title}</a>
+
+                  )}
               </li>
-              ))}          
+              )
+              )}          
             </ul>
               {/* NAVIGATION REDES MOBILE*/}
           
