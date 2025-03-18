@@ -30,7 +30,8 @@ export const Products = () => {
                             <h3 className={`${theme === "oscuro" ?"text-2xl font-semibold text-white" : "text-2xl font-semibold text-[#5B0601]"}`}>{product.title} </h3>
                             <p className={`${theme === "oscuro" ? "text-xl font-bold text-white mb-2" : "text-xl font-bold text-[#5B0601] mb-2"}`}> ${product.price}</p>
                             <button 
-                                onClick={() => addToCart(product)}
+                                onClick={() => {addToCart(product)
+                                alert(`✅ ${product.title} agregado al carrito`)}}
                                 className={`${theme === "oscuro" ? "bg-[#5B0601]  text-white hover:bg-[#E0B394] hover:text-black px-4 py-2 rounded-lg transition-all" : "bg-[#5B0601] text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all"}`}>
                                 Agregar al carrito
                             <i className="m-1 bi bi-cart"></i>
