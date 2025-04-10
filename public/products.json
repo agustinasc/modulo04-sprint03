@@ -14,5 +14,6 @@
     { "id": 13,"image": "/galletaAvena.jpeg", "title": "Galleta de Avena", "price": "500.00" },
     { "id": 14,"image": "/grisines.jpeg", "title": "Grisines", "price": "700.00" },
     { "id": 15,"image": "/bollito.jpeg", "title": "Bollito de Dulce de Leche", "price": "500.00" },
-    { "id": 16,"image": "/pastafrola.jpeg", "title": "Pasta Frola Individual", "price": "500.00" }
+    { "id": 16,"image": "/pastafrola.jpeg", "title": "Pasta Frola Individual", "price": "500.00" },
+    { "id": 17,"image": "/cabsha.jpeg", "title": "Cabsha Individual", "price": "1000.00" }
   ]

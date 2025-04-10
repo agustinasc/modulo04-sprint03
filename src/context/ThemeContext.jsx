@@ -8,6 +8,7 @@ export const ThemeProvider = ({children}) => {
          return localStorage.getItem("theme") || "claro"
     })
 
+    /* para actualizar el local storage */
     useEffect(() => {
       localStorage.setItem("theme", theme);
       document.documentElement.className = theme

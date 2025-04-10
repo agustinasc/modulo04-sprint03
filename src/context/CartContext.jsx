@@ -9,7 +9,7 @@ export const CartProvider = ({children}) => {
 
   const [cart, setCart] = useState(() => {
     try {
-      const storedCart  = localStorage.getItem("cart") || [];
+      const storedCart  = localStorage.getItem("cart") || []; //trae lo que tenemos guardado y lo convierte en un arr
       return storedCart ? JSON.parse(storedCart) : [];
     } catch (error) {
       console.error("Error al parsear locaStorage:", error);
@@ -25,20 +25,7 @@ export const CartProvider = ({children}) => {
         .catch((error) => console.error("Error al cargar productos", error))
       }, []);
     
-  /*   useEffect(() => {
-      try {
-        const storedCart = localStorage.getItem("cart");
-        console.log("Productos cargados en localStorage al iniciar:", storedCart);
-        if (storedCart){
-          setCart(JSON.parse(storedCart))
-        }
-      } catch (error) {
-        console.error("Error al cargar el carrito", error);
-        setCart([])
-      }
-    }, [])
-     */
-
+      /* para guardar los cambios de carrito */
     useEffect(() => {
       try {
         if(cart.length > 0){
@@ -75,14 +62,7 @@ export const CartProvider = ({children}) => {
     } 
 
 
-    const updateQuantity = (id, quantity) => {
-        setCart((prevCart) =>
-          prevCart.map((product) =>
-            product.id === id ? { ...product, quantity: Math.max(1, quantity) } : product
-          )
-        );
-    }; 
-
+    /* elimina el producto del carrito */
     const removeProduct = (productID) => {
       setCart(cart.filter(product => product.id !== productID))
       localStorage.setItem("cart", JSON.stringify([]))
@@ -103,7 +83,6 @@ export const CartProvider = ({children}) => {
           closeCart,
           addToCart, 
           removeFromCart, 
-          updateQuantity,
           removeProduct,
           clearCart,
          
